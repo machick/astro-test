@@ -1,5 +1,14 @@
 ---
+import Pokemon from "../components/Pokemon.jsx";
+import BaseLayout from "../layouts/baseLayout.astro";
 
+/* const pokemon = await fetch("https://pokeapi.co/api/v2/pokemon/snorlax").then((res) => {
+	return res.json()
+});
+
+console.log("🚀 ~ pokemon:", pokemon)
+const {name, sprites:{front_default}} = pokemon
+ */
 ---
 
 <html lang="en">
@@ -11,6 +20,9 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<BaseLayout>
+			<h1>Astro</h1>
+			<Pokemon client:only/>
+		</BaseLayout>
 	</body>
 </html>
